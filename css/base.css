@@ -674,6 +674,10 @@ textarea {
   width: 50%;
 }
 
+.block-1{
+  width: 100%;
+}
+
 
 /**
  * Clearing for block grid columns. Allow columns with 
@@ -782,6 +786,9 @@ textarea {
   }
   .block-mob-1-2 .bgrid {
     width: 50%;
+  }
+  .bprofile {
+    width: 100%;
   }
   .block-mob-full .bgrid {
     width: 100%;

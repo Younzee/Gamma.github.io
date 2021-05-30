@@ -1160,7 +1160,7 @@ h1.intro-header::before {
   border: none;
   width: 120px;
   height: 35px;
-  background: url("../images/logo.svg") no-repeat center;
+  background: url("../images/new_logo.svg") no-repeat center;
   background-size: 120px 35px;
   font: 0/0 a;
   text-shadow: none;
@@ -1495,6 +1495,7 @@ h1.intro-header::before {
 }
 
 .home-image-right {
+  height: 100%;
   display: block;
   position: absolute;
   right: 0;
@@ -1502,15 +1503,14 @@ h1.intro-header::before {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  padding-top: 21rem;
+  /*padding-top: 10rem;*/
   z-index: 500;
-  width: 50%;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .home-image-right img {
   vertical-align: bottom;
-  width: 75%;
+  height: 100%;
 }
 
 
@@ -1761,7 +1761,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 0;
-    margin-bottom: -378px;
+    margin-bottom: -185px;
   }
 }
 
@@ -1832,15 +1832,15 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  *
  * ------------------------------------------------------------------- */
 
-#about {
+#about, #features, #aboutus {
   min-height: 786px;
   background: #ffffff;
-  padding-top: 18rem;
+  padding-top: 10rem;
   overflow: hidden;
 }
 
 .about-intro {
-  padding-bottom: 3.6rem;
+  /*padding-bottom: 3.6rem;*/
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
@@ -1870,7 +1870,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 .about-how {
-  padding-top: 7.2rem;
+  padding-top: 2.5rem;
   padding-bottom: 6rem;
 }
 
@@ -1878,14 +1878,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   text-align: center;
 }
 
-#about .about-how h1.intro-header::before {
+#features h1.intro-header {
+  text-align: center;
+}
+
+#aboutus .about-how h1.intro-header::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-.about-how-content {
+.about-team {
   position: relative;
   width: 100%;
   max-width: 1000px;
@@ -1896,40 +1900,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   clear: both;
 }
 
-.about-how-content::before,
-.about-how-content::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-}
 
-.about-how-content::before {
-  left: 0;
-}
-
-.about-how-content::after {
-  left: 50%;
-}
-
-.about-how-content .about-how-steps {
-  width: 100%;
-}
-
-.about-how-content .step {
+.about-team .step {
   padding: 0 40px 1.5rem 60px;
   position: relative;
   min-height: 240px;
 }
 
-.about-how-content .step h3 {
+.about-team .step h3 {
   margin-bottom: 2.4rem;
 }
 
-.about-how-content .step::before {
+.about-team .step::before {
   display: block;
   font-family: "muli-bold";
   font-size: 2rem;
@@ -1947,6 +1929,32 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   top: -12px;
   left: -27px;
 }
+.ceo{
+  display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.img_name{
+  text-align: center;
+}
+
+.dg{
+  display: inline-flex;
+  width: 100%;
+}
+
+.profile{
+  width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.about-team img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+
+}
 
 .about-bottom-image img {
   vertical-align: bottom;
@@ -1959,7 +1967,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  * ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
-  .about-how-content {
+  .about-team {
     max-width: 800px;
   }
 }
@@ -1982,19 +1990,19 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     margin-left: 0;
     margin-right: 0;
   }
-  .about-how-content {
+  .about-team {
     max-width: 700px;
   }
 }
 
 @media only screen and (max-width: 850px) {
-  .about-how-content {
+  .about-team {
     max-width: 550px;
   }
-  .about-how-content::after {
+  .about-team::after {
     display: none;
   }
-  .about-how-content .step {
+  .about-team .step {
     width: 100% !important;
     float: none !important;
     clear: both !important;
@@ -2016,13 +2024,13 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .about-how h3 {
     font-size: 1.9rem;
   }
-  .about-how-content::before {
+  .about-team::before {
     left: 30px;
   }
-  .about-how-content .step {
+  .about-team .step {
     padding: 0 10px 0 80px;
   }
-  .about-how-content .step::before {
+  .about-team .step::before {
     font-size: 1.6rem;
     height: 45px;
     width: 45px;
@@ -2051,16 +2059,16 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 @media only screen and (max-width: 400px) {
-  .about-how-content {
+  .about-team {
     text-align: center;
   }
-  .about-how-content::before {
+  .about-team::before {
     display: none;
   }
-  .about-how-content .step {
+  .about-team .step {
     padding: 60px 0 0 0;
   }
-  .about-how-content .step::before {
+  .about-team .step::before {
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2478,7 +2486,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 #download {
   background: #FFDE59;
-  color: #b2fabc;
+  color: black;
   padding-top: 12rem;
   padding-bottom: 12rem;
   text-align: center;
@@ -2497,7 +2505,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 #download .lead {
-  color: #b2fabc;
+  color: black;
   margin-top: 4.8rem;
 }
 
@@ -2859,6 +2867,100 @@ footer ul a:visited {
     display: none;
   }
 }
+.carousel {
+  height: 700px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
 
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
 
-/*# sourceMappingURL=main.css.map */
+div.item img {
+  height: 500px;
+}
+
+div.item {
+  position: absolute;
+  height: 531px;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+}
+div.item:nth-of-type(4) {
+  --offset: 4;
+}
+div.item:nth-of-type(5) {
+  --offset: 5;
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
